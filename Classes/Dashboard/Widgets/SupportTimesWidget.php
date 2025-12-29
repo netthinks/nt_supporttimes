@@ -31,11 +31,11 @@ class SupportTimesWidget implements WidgetInterface
         $renderingContext->getTemplatePaths()->setTemplatePathAndFilename($templatePathAndFilename);
         $renderingContext->getViewHelperResolver()->addNamespace('f', 'TYPO3\\CMS\\Fluid\\ViewHelpers');
         
-        $renderingContext->getVariableProvider()->setAll([
-            'releaseData' => $this->releaseService->getReleaseData(),
-            'options' => $this->options,
-            'configuration' => $this->configuration,
-        ]);
+        // Use add() instead of setAll()
+        $variableProvider = $renderingContext->getVariableProvider();
+        $variableProvider->add('releaseData', $this->releaseService->getReleaseData());
+        $variableProvider->add('options', $this->options);
+        $variableProvider->add('configuration', $this->configuration);
 
         $view = GeneralUtility::makeInstance(\TYPO3Fluid\Fluid\View\TemplateView::class, $renderingContext);
         
