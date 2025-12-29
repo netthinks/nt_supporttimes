@@ -8,9 +8,17 @@ defined('TYPO3') or die();
     'ext-ntsupporttimes-icon'
 );
 
+$pluginSignature = 'ntsupporttimes_pi1';
+
+// Add FlexForm
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-    'ntsupporttimes_pi1',
+    $pluginSignature,
     'FILE:EXT:nt_supporttimes/Configuration/FlexForms/Pi1.xml'
 );
 
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['ntsupporttimes_pi1'] = 'pi_flexform';
+// Add pi_flexform to showitem for the plugin
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+
+// Ensure pi_flexform is shown in the backend form
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'pages,recursive,select_key';
+
