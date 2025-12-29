@@ -16,7 +16,7 @@ defined('TYPO3') or die();
 })();
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'NtSupporttimes',
+    'nt_supporttimes',
     'Pi1',
     [
         \Netthinks\NtSupporttimes\Controller\SupportTimesController::class => 'roadmap'

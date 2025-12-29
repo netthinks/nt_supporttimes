@@ -1,57 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang_db.xlf:flexform.sheet.general</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang_db.xlf:flexform.sheet.general</sheetTitle>
                 <type>array</type>
                 <el>
                     <settings.selectedVersions>
-                        <TCEforms>
-                            <label>LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang_db.xlf:flexform.selectedVersions</label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectCheckBox</renderType>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">TYPO3 14</numIndex>
-                                        <numIndex index="1">14</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">TYPO3 13</numIndex>
-                                        <numIndex index="1">13</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">TYPO3 12</numIndex>
-                                        <numIndex index="1">12</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">TYPO3 11</numIndex>
-                                        <numIndex index="1">11</numIndex>
-                                    </numIndex>
-                                    <numIndex index="4" type="array">
-                                        <numIndex index="0">TYPO3 10</numIndex>
-                                        <numIndex index="1">10</numIndex>
-                                    </numIndex>
-                                    <numIndex index="5" type="array">
-                                        <numIndex index="0">TYPO3 9</numIndex>
-                                        <numIndex index="1">9</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang_db.xlf:flexform.selectedVersions</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectCheckBox</renderType>
+                            <items>
+                                <numIndex index="0">
+                                    <label>TYPO3 14</label>
+                                    <value>14</value>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <label>TYPO3 13</label>
+                                    <value>13</value>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <label>TYPO3 12</label>
+                                    <value>12</value>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <label>TYPO3 11</label>
+                                    <value>11</value>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <label>TYPO3 10</label>
+                                    <value>10</value>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <label>TYPO3 9</label>
+                                    <value>9</value>
+                                </numIndex>
+                            </items>
+                        </config>
                     </settings.selectedVersions>
                     <settings.chartHeight>
-                        <TCEforms>
-                            <label>LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang_db.xlf:flexform.chartHeight</label>
-                            <config>
-                                <type>input</type>
-                                <size>5</size>
-                                <default>350</default>
-                                <eval>int,trim</eval>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang_db.xlf:flexform.chartHeight</label>
+                        <config>
+                            <type>number</type>
+                            <default>350</default>
+                        </config>
                     </settings.chartHeight>
                 </el>
             </ROOT>

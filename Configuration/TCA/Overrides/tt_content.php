@@ -2,7 +2,7 @@
 defined('TYPO3') or die();
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-    'NtSupporttimes',
+    'nt_supporttimes',
     'Pi1',
     'LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang_db.xlf:plugin.pi1.title',
     'ext-ntsupporttimes-icon'
