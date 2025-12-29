@@ -8,7 +8,7 @@ use Netthinks\NtSupporttimes\Service\ReleaseService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
-use TYPO3\CMS\Fluid\View\StandaloneView;
+use TYPO3\CMS\Fluid\View\TemplateView;
 
 class SupportTimesWidget implements WidgetInterface
 {
@@ -21,8 +21,8 @@ class SupportTimesWidget implements WidgetInterface
 
     public function renderWidgetContent(): string
     {
-        $view = GeneralUtility::makeInstance(StandaloneView::class);
-        $view->setTemplatePathAndFilename(
+        $view = GeneralUtility::makeInstance(TemplateView::class);
+        $view->getRenderingContext()->getTemplatePaths()->setTemplatePathAndFilename(
             GeneralUtility::getFileAbsFileName('EXT:nt_supporttimes/Resources/Private/Templates/Dashboard/SupportTimes.html')
         );
         $view->assignMultiple([
