@@ -98,7 +98,7 @@ GPL-2.0-or-later
 ## Author
 
 NET.THINKS
-www.netthinks.com   
+https://www.netthinks.com   
 
 ## Support
 
