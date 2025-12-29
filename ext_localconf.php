@@ -26,22 +26,3 @@ defined('TYPO3') or die();
         \Netthinks\NtSupporttimes\Controller\SupportTimesController::class => 'roadmap'
     ]
 );
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-    'mod {
-        wizards.newContentElement.wizardItems.plugins {
-            elements {
-                pi1 {
-                    iconIdentifier = ext-ntsupporttimes-icon
-                    title = TYPO3 Support Roadmap
-                    description = Interactive Gantt chart of TYPO3 support times
-                    tt_content_defValues {
-                        CType = list
-                        list_type = ntsupporttimes_pi1
-                    }
-                }
-            }
-            show := addToList(pi1)
-        }
-    }'
-);
