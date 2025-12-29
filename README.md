@@ -75,7 +75,7 @@ When adding the roadmap plugin to a page:
 - **TYPO3:** 12.4 LTS, 13.4 LTS, or 14.x
 - **Dependencies:** 
   - TYPO3 Dashboard (for widget)
-  - ApexCharts (loaded via CDN for frontend chart)
+  - ApexCharts (included locally, no CDN - privacy-friendly)
 
 ## Multilingual Support
 
@@ -89,7 +89,6 @@ All labels, tooltips, and chart phases are fully translated.
 
 - **Modern TYPO3 APIs:** Uses Extbase, Fluid, PSR-14 events
 - **Dependency Injection:** All services configured via Services.yaml
-- **Icon:** Custom SVG icon combining calendar and timeline elements
 - **Responsive:** Charts and tables adapt to different screen sizes
 
 ## License
@@ -98,7 +97,8 @@ GPL-2.0-or-later
 
 ## Author
 
-Netthinks GmbH
+NET.THINKS
+www.netthinks.com   
 
 ## Support
 
