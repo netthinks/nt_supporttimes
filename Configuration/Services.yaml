@@ -1,0 +1,25 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Netthinks\NtSupporttimes\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  Netthinks\NtSupporttimes\Controller\SupportTimesController:
+    public: true
+    tags: ['controller.service_subclass']
+
+  Netthinks\NtSupporttimes\Dashboard\Widgets\SupportTimesWidget:
+    tags:
+      - name: dashboard.widget
+        identifier: 'nt_supporttimes.list'
+        groupNames: 'typo3'
+        title: 'LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang.xlf:title'
+        description: 'LLL:EXT:nt_supporttimes/Resources/Private/Language/locallang.xlf:description'
+        iconIdentifier: 'ext-ntsupporttimes-icon'
+        height: 'medium'
+        width: 'medium'
+

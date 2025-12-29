@@ -1,0 +1,90 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="nt-supporttimes-roadmap">
+        <div id="typo3-roadmap-chart" data-height="{settings.chartHeight -> f:or(alternative: 350)}"></div>
+    </div>
+
+    <script id="typo3-roadmap-data" type="application/json"><f:format.raw>{chartData}</f:format.raw></script>
+
+    <f:asset.script identifier="chartjs" src="EXT:nt_supporttimes/Resources/Public/JavaScript/chart.js" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartElement = document.getElementById('typo3-roadmap-chart');
+            var dataElement = document.getElementById('typo3-roadmap-data');
+
+            if (!chartElement || !dataElement) return;
+
+            var chartHeight = parseInt(chartElement.getAttribute('data-height')) || 350;
+            var chartSeriesData = [];
+
+            try {
+                var rawData = dataElement.textContent;
+                var parsed = JSON.parse(rawData);
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    chartSeriesData = parsed;
+                }
+            } catch (e) {
+                console.error('Error parsing chart data', e);
+            }
+
+            var options = {
+                series: chartSeriesData,
+                chart: {
+                    height: chartHeight,
+                    type: 'rangeBar',
+                    fontFamily: 'sans-serif',
+                    toolbar: {
+                        show: false
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: true,
+                        barHeight: '50%',
+                        rangeBarGroupRows: true
+                    }
+                },
+                colors: [
+                    function (opts) {
+                        // Color is passed in data structure
+                        if (opts.w.config.series[0].data[opts.seriesIndex]) {
+                            return opts.w.config.series[0].data[opts.seriesIndex].fillColor;
+                        }
+                        return '#000';
+                    }
+                ],
+                fill: {
+                    type: 'solid'
+                },
+                xaxis: {
+                    type: 'datetime'
+                },
+                tooltip: {
+                    custom: function (opts) {
+                        const fromYear = new Date(opts.y1).toLocaleDateString('de-DE');
+                        const toYear = new Date(opts.y2).toLocaleDateString('de-DE');
+                        const dataPoint = opts.w.config.series[0].data[opts.dataPointIndex];
+                        const meta = dataPoint ? dataPoint.meta : '';
+
+                        return '<div class="apexcharts-tooltip-rangebar" style="padding: 10px; background: #fff; border: 1px solid #ddd;">' +
+                            '<div><b>' + meta + '</b></div>' +
+                            '<div>' + fromYear + ' - ' + toYear + '</div>' +
+                            '</div>';
+                    }
+                },
+                legend: {
+                    show: false
+                }
+            };
+
+            var chart = new ApexCharts(chartElement, options);
+            chart.render();
+        });
+    </script>
+</f:section>
+
+</html>

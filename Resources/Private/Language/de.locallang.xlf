@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2023-10-10T00:00:00Z" product-name="nt_supporttimes">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>TYPO3 Support Times</source>
+				<target>TYPO3 Support-Zeiträume</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Displays the current support status of TYPO3 versions.</source>
+				<target>Zeigt den aktuellen Support-Status der TYPO3-Versionen an.</target>
+			</trans-unit>
+			<trans-unit id="header.roadmap">
+				<source>TYPO3 Support Roadmap</source>
+				<target>TYPO3 Support-Roadmap</target>
+			</trans-unit>
+			<trans-unit id="header.version">
+				<source>Version</source>
+				<target>Version</target>
+			</trans-unit>
+			<trans-unit id="header.latest">
+				<source>Latest Release</source>
+				<target>Neuestes Release</target>
+			</trans-unit>
+			<trans-unit id="header.support_official">
+				<source>Regular Support</source>
+				<target>Regulärer Support</target>
+			</trans-unit>
+			<trans-unit id="header.support_elts">
+				<source>ELTS</source>
+				<target>ELTS</target>
+			</trans-unit>
+			<trans-unit id="header.status">
+				<source>Status</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="msg.no_data">
+				<source>No data available. Please check your internet connection or configuration.</source>
+				<target>Keine Daten verfügbar. Bitte Internetverbindung oder Konfiguration prüfen.</target>
+			</trans-unit>
+			<trans-unit id="status.active">
+				<source>Active</source>
+				<target>Aktiv</target>
+			</trans-unit>
+			<trans-unit id="status.expiring">
+				<source>Expiring soon</source>
+				<target>Läuft bald ab</target>
+			</trans-unit>
+			<trans-unit id="status.elts">
+				<source>ELTS</source>
+				<target>ELTS</target>
+			</trans-unit>
+			<trans-unit id="status.expired">
+				<source>Expired</source>
+				<target>Abgelaufen</target>
+			</trans-unit>
+			<trans-unit id="chart.phase.sprint">
+				<source>Sprint Release</source>
+				<target>Sprint-Release</target>
+			</trans-unit>
+			<trans-unit id="chart.phase.regular">
+				<source>Regular Maintenance</source>
+				<target>Reguläre Wartung</target>
+			</trans-unit>
+			<trans-unit id="chart.phase.priority">
+				<source>Priority Bugfixes</source>
+				<target>Prioritäts-Bugfixes</target>
+			</trans-unit>
+			<trans-unit id="chart.phase.elts">
+				<source>ELTS</source>
+				<target>ELTS</target>
+			</trans-unit>
+			<trans-unit id="chart.phase.extended">
+				<source>Extended Partner Support</source>
+				<target>Erweiterter Partner-Support</target>
+			</trans-unit>
+			<trans-unit id="chart.phase.stabilization">
+				<source>Stabilization Phase</source>
+				<target>Stabilisierungsphase</target>
+			</trans-unit>
+			<trans-unit id="widget.header">
+				<source>TYPO3 Support Status</source>
+				<target>TYPO3 Support-Status</target>
+			</trans-unit>
+			<trans-unit id="widget.description">
+				<source>Overview of TYPO3 versions with their current support status and end dates.</source>
+				<target>Übersicht der TYPO3-Versionen mit ihrem aktuellen Support-Status und Enddaten.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

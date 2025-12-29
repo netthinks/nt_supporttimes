@@ -1,0 +1,26 @@
+{
+    "name": "netthinks/nt-supporttimes",
+    "type": "typo3-cms-extension",
+    "description": "Displays TYPO3 support times in the backend dashboard",
+    "authors": [
+        {
+            "name": "Netthinks",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "typo3/cms-core": "^12.4 || ^13.4 || ^14.0",
+        "typo3/cms-dashboard": "^12.4 || ^13.4 || ^14.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netthinks\\NtSupporttimes\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "nt_supporttimes"
+        }
+    }
+}

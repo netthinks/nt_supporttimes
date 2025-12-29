@@ -1,0 +1,8 @@
+# cat=basic; type=string; label=Supported Major Versions (comma separated)
+supportedVersions = 9,10,11,12,13,14
+
+# cat=basic; type=int+; label=Cache Lifetime (seconds)
+cacheLifetime = 86400
+
+# cat=basic; type=boolean; label=Show ELTS Information
+showElts = 1

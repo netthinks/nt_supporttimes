@@ -1,0 +1,4 @@
+.. role:: code(code)
+.. role:: typoscript(code)
+.. role:: ts(typoscript)
+.. role:: php(code)

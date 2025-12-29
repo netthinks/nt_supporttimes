@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2023-10-10T00:00:00Z" product-name="nt_supporttimes">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>TYPO3 Support Times</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Displays the current support status of TYPO3 versions.</source>
+			</trans-unit>
+			<trans-unit id="header.roadmap">
+				<source>TYPO3 Support Roadmap</source>
+			</trans-unit>
+			<trans-unit id="header.version">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="header.latest">
+				<source>Latest Release</source>
+			</trans-unit>
+			<trans-unit id="header.support_official">
+				<source>Regular Support</source>
+			</trans-unit>
+			<trans-unit id="header.support_elts">
+				<source>ELTS</source>
+			</trans-unit>
+			<trans-unit id="header.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="msg.no_data">
+				<source>No data available. Please check your internet connection or configuration.</source>
+			</trans-unit>
+			<trans-unit id="status.active">
+				<source>Active</source>
+			</trans-unit>
+			<trans-unit id="status.expiring">
+				<source>Expiring soon</source>
+			</trans-unit>
+			<trans-unit id="status.elts">
+				<source>ELTS</source>
+			</trans-unit>
+			<trans-unit id="status.expired">
+				<source>Expired</source>
+			</trans-unit>
+			<trans-unit id="chart.phase.sprint">
+				<source>Sprint Release</source>
+			</trans-unit>
+			<trans-unit id="chart.phase.regular">
+				<source>Regular Maintenance</source>
+			</trans-unit>
+			<trans-unit id="chart.phase.priority">
+				<source>Priority Bugfixes</source>
+			</trans-unit>
+			<trans-unit id="chart.phase.elts">
+				<source>ELTS</source>
+			</trans-unit>
+			<trans-unit id="chart.phase.extended">
+				<source>Extended Partner Support</source>
+			</trans-unit>
+			<trans-unit id="chart.phase.stabilization">
+				<source>Stabilization Phase</source>
+			</trans-unit>
+			<trans-unit id="widget.header">
+				<source>TYPO3 Support Status</source>
+			</trans-unit>
+			<trans-unit id="widget.description">
+				<source>Overview of TYPO3 versions with their current support status and end dates.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

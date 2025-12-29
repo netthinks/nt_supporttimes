@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2023-10-10T00:00:00Z" product-name="nt_supporttimes">
+		<header/>
+		<body>
+			<trans-unit id="extension.title">
+				<source>TYPO3 Support Roadmap</source>
+			</trans-unit>
+			<trans-unit id="extension.description">
+				<source>Displays TYPO3 support times and roadmap in the backend and frontend</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
