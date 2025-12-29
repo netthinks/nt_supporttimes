@@ -25,7 +25,7 @@ TYPO3 Support Roadmap
     2023-2025
 
 :Author:
-    Netthinks GmbH
+    NET.THINKS
 
 :License:
     This document is published under the Open Content License available from http://www.opencontent.org/opl.shtml
