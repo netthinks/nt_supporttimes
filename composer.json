@@ -1,6 +1,7 @@
 {
     "name": "netthinks/nt-supporttimes",
     "type": "typo3-cms-extension",
+    "license": "GPL-2.0-or-later",
     "description": "Displays TYPO3 support times in the backend dashboard",
     "authors": [
         {
