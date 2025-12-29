@@ -8,8 +8,7 @@ use Netthinks\NtSupporttimes\Service\ReleaseService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
-use TYPO3Fluid\Fluid\View\TemplateView;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContext;
+use TYPO3\CMS\Fluid\Core\Rendering\RenderingContextFactory;
 
 class SupportTimesWidget implements WidgetInterface
 {
@@ -22,20 +21,24 @@ class SupportTimesWidget implements WidgetInterface
 
     public function renderWidgetContent(): string
     {
+        $renderingContextFactory = GeneralUtility::makeInstance(RenderingContextFactory::class);
+        $renderingContext = $renderingContextFactory->create();
+        
         $templatePathAndFilename = GeneralUtility::getFileAbsFileName(
             'EXT:nt_supporttimes/Resources/Private/Templates/Dashboard/SupportTimes.html'
         );
-
-        $renderingContext = new RenderingContext();
-        $renderingContext->getTemplatePaths()->setTemplatePathAndFilename($templatePathAndFilename);
         
-        $view = new TemplateView($renderingContext);
-        $view->assignMultiple([
+        $renderingContext->getTemplatePaths()->setTemplatePathAndFilename($templatePathAndFilename);
+        $renderingContext->getViewHelperResolver()->addNamespace('f', 'TYPO3\\CMS\\Fluid\\ViewHelpers');
+        
+        $renderingContext->getVariableProvider()->setAll([
             'releaseData' => $this->releaseService->getReleaseData(),
             'options' => $this->options,
             'configuration' => $this->configuration,
         ]);
 
+        $view = GeneralUtility::makeInstance(\TYPO3Fluid\Fluid\View\TemplateView::class, $renderingContext);
+        
         return $view->render();
     }
 
