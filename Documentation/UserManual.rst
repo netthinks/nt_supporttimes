@@ -52,7 +52,7 @@ Adding the Plugin
 
 1. Create or edit a page in the TYPO3 backend
 2. Add a new **Content Element**
-3. Select **Plugins → TYPO3 Support Roadmap**
+3. Select **Plugins → TYPO3 Support Times**
 4. Configure the plugin settings (see below)
 5. Save and view the page
 

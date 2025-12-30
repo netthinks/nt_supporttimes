@@ -1,4 +1,4 @@
-# TYPO3 Support Roadmap (nt_supporttimes)
+# TYPO3 Support Times (nt_supporttimes)
 
 Display TYPO3 support times, lifecycle information, and interactive roadmap charts in both the TYPO3 backend and frontend.
 
@@ -40,6 +40,12 @@ composer require netthinks/nt-supporttimes
 2. Install via Extension Manager
 3. Activate the extension
 
+### Include TypoScript
+1. Go to **Template** module
+2. Edit your Root TypoScript Record
+3. Include static template **Support Times (nt_supporttimes)**
+
+
 ## Configuration
 
 ### Extension Settings
@@ -65,7 +71,7 @@ When adding the roadmap plugin to a page:
 
 ### Frontend Roadmap
 1. Create a new content element
-2. Select **Plugins → TYPO3 Support Roadmap**
+2. Select **Plugins → TYPO3 Support Times**
 3. Configure display options in the **Plugin** tab
 4. Save and view the interactive timeline on your page
 

@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="extension.title">
-				<source>TYPO3 Support Roadmap</source>
+				<source>TYPO3 Support Times</source>
 			</trans-unit>
 			<trans-unit id="extension.description">
 				<source>Displays TYPO3 support times and roadmap in the backend and frontend</source>

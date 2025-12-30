@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'TYPO3 Support Roadmap',
+    'title' => 'TYPO3 Support Times',
     'description' => 'Displays TYPO3 support times and roadmap in the backend and frontend',
     'category' => 'be',
     'author' => 'Netthinks',

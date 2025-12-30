@@ -10,7 +10,7 @@
 				<source>Displays the current support status of TYPO3 versions.</source>
 			</trans-unit>
 			<trans-unit id="header.roadmap">
-				<source>TYPO3 Support Roadmap</source>
+				<source>TYPO3 Support Times</source>
 			</trans-unit>
 			<trans-unit id="header.version">
 				<source>Version</source>

@@ -4,8 +4,8 @@
 		<header/>
 		<body>
 			<trans-unit id="plugin.pi1.title">
-				<source>TYPO3 Support Roadmap</source>
-				<target>TYPO3 Support-Roadmap</target>
+				<source>TYPO3 Support Times</source>
+				<target>TYPO3 Support Times</target>
 			</trans-unit>
 			<trans-unit id="plugin.pi1.description">
 				<source>Interactive timeline chart showing TYPO3 support phases and release dates</source>

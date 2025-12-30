@@ -22,6 +22,16 @@ Via Extension Manager
 2.  Go to **Admin Tools > Extensions**.
 3.  Activate the extension `nt_supporttimes`.
 
+Include TypoScript
+------------------
+
+1.  Go to the **Template** module.
+2.  Select your root page.
+3.  Edit the **Info/Modify** or **Constant Editor** record (or just edit the whole Template Record).
+4.  Go to the **Includes** tab.
+5.  Select **Support Times (nt_supporttimes)** from the *Available Items* list.
+
+
 .. _configuration:
 
 =============

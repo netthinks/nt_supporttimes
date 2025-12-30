@@ -3,7 +3,7 @@ mod {
         elements {
             ntsupporttimes_pi1 {
                 iconIdentifier = ext-ntsupporttimes-icon
-                title = TYPO3 Support Roadmap
+                title = TYPO3 Support Times
                 description = Interactive Gantt chart of TYPO3 support times
                 tt_content_defValues {
                     CType = list
