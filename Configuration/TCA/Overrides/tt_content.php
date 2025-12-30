@@ -22,28 +22,5 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignat
 // Ensure pi_flexform is shown in the backend form
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'pages,recursive,select_key';
 
-// TYPO3 14: Explicitly configure the plugin type to show pi_flexform
-$GLOBALS['TCA']['tt_content']['types'][$pluginSignature] = [
-    'showitem' => '
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-            --palette--;;general,
-            --palette--;;headers,
-        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.plugin,
-            pi_flexform,
-        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-            --palette--;;frames,
-            --palette--;;appearanceLinks,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
-            --palette--;;language,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-            --palette--;;hidden,
-            --palette--;;access,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
-            categories,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
-            rowDescription,
-        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
-    ',
-];
 
 
