@@ -12,15 +12,11 @@ $pluginSignature = 'ntsupporttimes_pi1';
 
 // Add FlexForm
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-    $pluginSignature,
-    'FILE:EXT:nt_supporttimes/Configuration/FlexForms/Pi1.xml'
+    '*',
+    'FILE:EXT:nt_supporttimes/Configuration/FlexForms/Pi1.xml',
+    $pluginSignature
 );
 
-// Add pi_flexform to showitem for the plugin
+// Configure the plugin to show pi_flexform
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-
-// Ensure pi_flexform is shown in the backend form
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'pages,recursive,select_key';
-
-
-
