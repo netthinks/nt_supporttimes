@@ -10,9 +10,14 @@ defined('TYPO3') or die();
 
 $pluginSignature = 'ntsupporttimes_pi1';
 
-// Add FlexForm configuration
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'pages,recursive,select_key';
+// Add FlexForm
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+    $pluginSignature,
+    'FILE:EXT:nt_supporttimes/Configuration/FlexForms/Pi1.xml'
+);
 
-// Configure pi_flexform field for this plugin
-$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds'][$pluginSignature] = 'FILE:EXT:nt_supporttimes/Configuration/FlexForms/Pi1.xml';
+// Add pi_flexform to showitem for the plugin
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+
+// Exclude standard fields
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'pages,recursive,select_key';
