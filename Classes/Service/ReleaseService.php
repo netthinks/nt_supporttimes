@@ -52,7 +52,7 @@ class ReleaseService
 
     private function fetchJson(string $url): array
     {
-        $response = $this->requestFactory->request($url, 'GET', ['verify' => false]);
+        $response = $this->requestFactory->request($url, 'GET');
         if ($response->getStatusCode() !== 200) {
             throw new \RuntimeException('Failed to fetch data from ' . $url);
         }
