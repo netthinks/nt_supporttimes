@@ -65,10 +65,21 @@
                 },
                 tooltip: {
                     custom: function (opts) {
+                        const escapeHtml = function (value) {
+                            return String(value).replace(/[&<>"']/g, function (char) {
+                                return {
+                                    '&': '&amp;',
+                                    '<': '&lt;',
+                                    '>': '&gt;',
+                                    '"': '&quot;',
+                                    "'": '&#039;'
+                                }[char];
+                            });
+                        };
                         const fromYear = new Date(opts.y1).toLocaleDateString('de-DE');
                         const toYear = new Date(opts.y2).toLocaleDateString('de-DE');
                         const dataPoint = opts.w.config.series[0].data[opts.dataPointIndex];
-                        const meta = dataPoint ? dataPoint.meta : '';
+                        const meta = dataPoint ? escapeHtml(dataPoint.meta) : '';
 
                         return '<div class="apexcharts-tooltip-rangebar" style="padding: 10px; background: #fff; border: 1px solid #ddd;">' +
                             '<div><b>' + meta + '</b></div>' +
