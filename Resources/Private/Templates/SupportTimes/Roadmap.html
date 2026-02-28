@@ -20,6 +20,17 @@
 
             var chartHeight = parseInt(chartElement.getAttribute('data-height')) || 350;
             var chartSeriesData = [];
+            var escapeHtml = function (value) {
+                return String(value).replace(/[&<>"']/g, function (char) {
+                    return {
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        '"': '&quot;',
+                        "'": '&#039;'
+                    }[char];
+                });
+            };
 
             try {
                 var rawData = dataElement.textContent;
@@ -65,17 +76,6 @@
                 },
                 tooltip: {
                     custom: function (opts) {
-                        const escapeHtml = function (value) {
-                            return String(value).replace(/[&<>"']/g, function (char) {
-                                return {
-                                    '&': '&amp;',
-                                    '<': '&lt;',
-                                    '>': '&gt;',
-                                    '"': '&quot;',
-                                    "'": '&#039;'
-                                }[char];
-                            });
-                        };
                         const fromYear = new Date(opts.y1).toLocaleDateString('de-DE');
                         const toYear = new Date(opts.y2).toLocaleDateString('de-DE');
                         const dataPoint = opts.w.config.series[0].data[opts.dataPointIndex];
