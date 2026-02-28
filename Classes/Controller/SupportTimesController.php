@@ -23,7 +23,8 @@ class SupportTimesController extends ActionController
         $rawReleaseData = $this->releaseService->getReleaseData($selectedVersions);
         $chartData = $this->prepareChartData($rawReleaseData);
 
-        $this->view->assign('chartData', json_encode($chartData));
+        $encodedChartData = json_encode($chartData, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
+        $this->view->assign('chartData', $encodedChartData === false ? '[]' : $encodedChartData);
         $this->view->assign('rawReleaseData', $rawReleaseData);
         
         return $this->htmlResponse();
