@@ -5,12 +5,14 @@ Display TYPO3 support times, lifecycle information, and interactive roadmap char
 ## Features
 
 ### Dashboard Widget
+![Dashboard Widget](Resources/Public/Screenshots/widget.png)
 - **Support Status Overview:** Shows all TYPO3 major versions with their current support status
 - **Color-coded Badges:** Visual indicators for Active, Expiring, ELTS, and Expired versions
 - **Scrollable Table:** Access all versions including legacy releases
 - **Multilingual:** Full English and German translations
 
 ### Frontend Roadmap Plugin
+![Frontend Roadmap](Resources/Public/Screenshots/roadmap.png)
 - **Interactive Timeline Chart:** Visual roadmap using ApexCharts
 - **Support Phases:** 
   - Sprint Releases (gray phases before LTS)
