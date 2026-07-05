@@ -25,6 +25,12 @@ Display TYPO3 support times, lifecycle information, and interactive roadmap char
   - Version filter (select which TYPO3 versions to display)
 - **Planned Releases:** Shows future TYPO3 14 sprint releases with estimated dates
 
+### Backend Update Notification
+- **Outdated-Version Warning:** Compares the installed TYPO3 version with the latest patch release of its major branch
+- **System Information Toolbar:** Shows a warning badge and message next to the TYPO3 version when an update is available
+- **Direct Link:** Message links to the release notes on get.typo3.org
+- **Fail-safe:** Skips silently when the TYPO3 API is unreachable
+
 ### Data & Performance
 - **Live API Data:** Fetches from official TYPO3 sources (get.typo3.org)
 - **Smart Caching:** Configurable cache lifetime (default: 24 hours)

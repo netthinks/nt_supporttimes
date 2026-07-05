@@ -87,6 +87,14 @@
 				<source>Overview of TYPO3 versions with their current support status and end dates.</source>
 				<target>Übersicht der TYPO3-Versionen mit ihrem aktuellen Support-Status und Enddaten.</target>
 			</trans-unit>
+			<trans-unit id="systeminformation.updateAvailable">
+				<source>TYPO3 update available</source>
+				<target>TYPO3-Update verfügbar</target>
+			</trans-unit>
+			<trans-unit id="systeminformation.installed">
+				<source>installed</source>
+				<target>installiert</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

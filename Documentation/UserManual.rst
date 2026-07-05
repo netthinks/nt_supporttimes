@@ -42,6 +42,43 @@ Scrolling
 
 The widget table is scrollable, allowing you to view all TYPO3 versions including legacy releases.
 
+Backend Update Notification
+===========================
+
+The extension automatically checks whether the installed TYPO3 version is up to
+date and warns you directly in the backend if it is not.
+
+How It Works
+------------
+
+On every backend request the system information toolbar (the info icon in the top
+toolbar, next to the TYPO3 version) is enriched with an update check:
+
+1. The installed TYPO3 version is determined.
+2. The latest patch release for the same major branch is fetched from
+   get.typo3.org (using the same cached data as the widget and roadmap).
+3. If the installed version is older than the latest patch release, a warning is
+   added to the toolbar.
+
+What You See
+------------
+
+When an update is available:
+
+* A **warning badge** appears on the system information toolbar item.
+* Opening the dropdown shows a message such as
+  *TYPO3 update available: 14.3.4 (installed: 14.3.1)*.
+* The version number links to the release notes on get.typo3.org.
+
+When the installation is up to date, no badge and no message are shown.
+
+.. note::
+
+   The check reuses the cached API data (default cache lifetime: 24 hours), so a
+   freshly published release may take up to the cache lifetime to appear. If the
+   TYPO3 API cannot be reached, the check is skipped silently — no badge and no
+   error are produced.
+
 Frontend Roadmap Plugin
 =======================
 

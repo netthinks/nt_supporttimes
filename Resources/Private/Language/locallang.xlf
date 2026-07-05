@@ -66,6 +66,12 @@
 			<trans-unit id="widget.description">
 				<source>Overview of TYPO3 versions with their current support status and end dates.</source>
 			</trans-unit>
+			<trans-unit id="systeminformation.updateAvailable">
+				<source>TYPO3 update available</source>
+			</trans-unit>
+			<trans-unit id="systeminformation.installed">
+				<source>installed</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

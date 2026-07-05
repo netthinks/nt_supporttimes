@@ -10,7 +10,7 @@ TYPO3 Support Times
     nt_supporttimes
 
 :Version:
-    1.0.0
+    1.3.0
 
 :Language:
     en
@@ -49,6 +49,7 @@ This extension provides comprehensive TYPO3 support lifecycle visualization thro
 
 * **Dashboard Widget:** Overview of all TYPO3 versions with support status
 * **Frontend Roadmap Plugin:** Interactive timeline chart showing support phases
+* **Backend Update Notification:** Warns in the system information toolbar when a newer patch release is available for the installed TYPO3 version
 * **Live Data:** Fetches from official TYPO3 API (get.typo3.org)
 * **Sprint Releases:** Displays pre-LTS sprint releases and stabilization phases
 * **Multilingual:** Full English and German translations
@@ -63,6 +64,14 @@ Dashboard Widget
 * Scrollable table for all TYPO3 versions
 * Latest release information with dates
 * Support end dates for official and ELTS support
+
+Backend Update Notification
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Compares the installed TYPO3 version against the latest patch release of its major branch
+* Adds a warning badge and message to the system information toolbar (next to the TYPO3 version) when the installation is outdated
+* Links directly to the release notes on get.typo3.org
+* Fails silently when the API is unreachable — no badge, no error
 
 Frontend Roadmap
 ~~~~~~~~~~~~~~~~
